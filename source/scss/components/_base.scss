@@ -1,3 +1,11 @@
-*, *:before, *:after {
-  box-sizing: border-box;
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+a:focus,
+button:focus,
+select:focus {
+    outline: none;
 }

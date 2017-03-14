@@ -9,22 +9,22 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
-$wdstudio-icon-name: 'wdstudio_icon';
-$wdstudio-icon-x: 0px;
-$wdstudio-icon-y: 0px;
-$wdstudio-icon-offset-x: 0px;
-$wdstudio-icon-offset-y: 0px;
-$wdstudio-icon-width: 200px;
-$wdstudio-icon-height: 200px;
-$wdstudio-icon-total-width: 200px;
-$wdstudio-icon-total-height: 200px;
-$wdstudio-icon-image: '../images/sprite.png';
-$wdstudio-icon: (0px, 0px, 0px, 0px, 200px, 200px, 200px, 200px, '../images/sprite.png', 'wdstudio_icon', );
-$spritesheet-width: 200px;
-$spritesheet-height: 200px;
+$ico-menu-name: 'ico-menu';
+$ico-menu-x: 0px;
+$ico-menu-y: 0px;
+$ico-menu-offset-x: 0px;
+$ico-menu-offset-y: 0px;
+$ico-menu-width: 64px;
+$ico-menu-height: 64px;
+$ico-menu-total-width: 64px;
+$ico-menu-total-height: 64px;
+$ico-menu-image: '../images/sprite.png';
+$ico-menu: (0px, 0px, 0px, 0px, 64px, 64px, 64px, 64px, '../images/sprite.png', 'ico-menu', );
+$spritesheet-width: 64px;
+$spritesheet-height: 64px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($wdstudio-icon, );
-$spritesheet: (200px, 200px, '../images/sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($ico-menu, );
+$spritesheet: (64px, 64px, '../images/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
 //

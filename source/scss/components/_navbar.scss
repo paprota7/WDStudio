@@ -1,0 +1,76 @@
+.navbar {
+	-webkit-box-shadow: 3px 0px 30px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 0px 30px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 0px 30px 0px rgba(0,0,0,0.75);
+
+	&__logo {
+		max-width: 100%;
+		padding: 25px 60px 0;
+	}
+
+	&__open {
+		position: absolute;
+		top: 25px;
+		left: 35px;
+		z-index: 3;
+
+		button {
+			font-size: 0;
+			border: none;
+			background-color: transparent;
+
+			.bar {
+				width: 48px;
+				height: 4px;
+				display: block;
+				border-radius: 3px;
+				background-color: $c-black;
+
+				+ .bar {
+					margin-top: 10px;
+				}
+			}
+		}
+
+		&--white {
+			button .bar {
+				background-color: $c-white;
+			}
+		}
+	}
+
+	&__menu {
+		margin: 0;
+		padding: 0;
+		top: 50%;
+		right: 0;
+		position: absolute;
+		list-style-type: none;
+		transform: translateY(-50%);
+		@include clearfix;
+
+		li {
+			a {
+				@media (min-width: $screen-md-min) {
+					display: block;
+					text-align: right;
+					text-decoration: none;
+					font-size: 20px;
+    				padding: 12px 40px 12px 0;
+					text-transform: uppercase;
+					transition: all 0.4s;
+					@include link($c-white, $c-white, $c-light-gray, $c-light-gray);
+				}
+
+			}
+			&:hover {
+				a {
+					@media (min-width: $screen-md-min) {
+						transform: scale(1.1);
+						margin: 0 8px 0 0;
+					}
+				}
+			}
+		}
+	}
+}

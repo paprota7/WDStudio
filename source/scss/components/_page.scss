@@ -11,10 +11,18 @@
 	&__logo {
 		@media (min-width: $screen-md-min) {
 			display: block;
-			width: 400px;
 			margin: 0 auto;
 		}
 	}
 
-	&__title {}
+	&__title {
+		background-size: cover;
+		background-position: center center;
+		background-image: url('../images/background.jpg');
+		h1 {
+			font-family: $f-roboto;
+			font-size: 40px;
+			margin: 0;
+		}
+	}
 }

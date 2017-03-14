@@ -10,8 +10,8 @@ jQuery.noConflict();
 
         pagePilling: function () {
             $('#page').pagepiling({
-                anchors: ['firstPage', 'secondPage'],
-                menu: '#menuenu'
+                anchors: ['1', '2'],
+                menu: '#menu'
             });
         }
 

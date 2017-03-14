@@ -4,39 +4,54 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
-    <title>WDStudio</title>
+	<title>WDStudio</title>
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-
-	<header class="header">
-		<nav class="header__nav">
-			<ul class="header__menu" id="menu">
-			    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Strona główna</a></li>
-			    <li data-menuanchor="secondPage"><a href="#secondPage">Portfolio</a></li>
+	<div id="st-container" class="st-container">
+		<nav class="st-menu st-effect-11 navbar" id="menu-1">
+			<a href="#"><img src="./images/logo-white.svg" class="navbar__logo" alt="Web Design Studio"></a>
+			<ul class="navbar__menu" id="menu">
+				<li data-menuanchor="1"><a href="#1">Strona główna</a></li>
+				<li data-menuanchor="2"><a href="#2">O nas</a></li>
+				<li data-menuanchor="3"><a href="#3">Portfolio</a></li>
+				<li data-menuanchor="4"><a href="#4">Kontakt</a></li>
 			</ul>
 		</nav>
-	</header>
 
-	<main class="page" id="page">
-		<section class="page__title section">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<img src="./images/logo.svg" alt="Web Design Studio" class="page__logo">
+		<main class="page st-pusher" id="page">
+			<div id="st-trigger-effects" class="navbar__open">
+				<button data-effect="st-effect-11">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+
+			<section class="page__title section">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<img src="./images/logo.svg" alt="Web Design Studio" class="page__logo">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="page__portfolio section">
+			</section>
+			<section class="page__portfolio section">
 
-		</section>
-	</main>
-
+			</section>
+		</main>
+	</div>
 
 	<script src="./js/scripts.js"></script>
 
