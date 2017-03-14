@@ -18,13 +18,13 @@ $wdstudio-icon-width: 200px;
 $wdstudio-icon-height: 200px;
 $wdstudio-icon-total-width: 200px;
 $wdstudio-icon-total-height: 200px;
-$wdstudio-icon-image: 'sprite.png';
-$wdstudio-icon: (0px, 0px, 0px, 0px, 200px, 200px, 200px, 200px, 'sprite.png', 'wdstudio_icon', );
+$wdstudio-icon-image: '../images/sprite.png';
+$wdstudio-icon: (0px, 0px, 0px, 0px, 200px, 200px, 200px, 200px, '../images/sprite.png', 'wdstudio_icon', );
 $spritesheet-width: 200px;
 $spritesheet-height: 200px;
-$spritesheet-image: 'sprite.png';
+$spritesheet-image: '../images/sprite.png';
 $spritesheet-sprites: ($wdstudio-icon, );
-$spritesheet: (200px, 200px, 'sprite.png', $spritesheet-sprites, );
+$spritesheet: (200px, 200px, '../images/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
 //
