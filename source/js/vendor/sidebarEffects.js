@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -47,12 +47,14 @@
 			el.addEventListener( eventtype, function( ev ) {
 				ev.stopPropagation();
 				ev.preventDefault();
-				container.className = 'st-container'; // clear
-				classie.add( container, effect );
-				setTimeout( function() {
-					classie.add( container, 'st-menu-open' );
-				}, 25 );
-				document.addEventListener( eventtype, bodyClickFn );
+                if (!(container.classList.contains('st-menu-open'))) {
+                    container.className = 'st-container'; // clear
+                    classie.add( container, effect );
+                    setTimeout( function() {
+                        classie.add( container, 'st-menu-open' );
+                    }, 25 );
+                    document.addEventListener( eventtype, bodyClickFn );
+                }
 			});
 		} );
 

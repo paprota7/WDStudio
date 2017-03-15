@@ -1060,6 +1060,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 
     };
 })(jQuery, document, window);
+
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-csstransforms3d-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load
  */
@@ -1070,7 +1071,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -1113,12 +1114,14 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 			el.addEventListener( eventtype, function( ev ) {
 				ev.stopPropagation();
 				ev.preventDefault();
-				container.className = 'st-container'; // clear
-				classie.add( container, effect );
-				setTimeout( function() {
-					classie.add( container, 'st-menu-open' );
-				}, 25 );
-				document.addEventListener( eventtype, bodyClickFn );
+                if (!(container.classList.contains('st-menu-open'))) {
+                    container.className = 'st-container'; // clear
+                    classie.add( container, effect );
+                    setTimeout( function() {
+                        classie.add( container, 'st-menu-open' );
+                    }, 25 );
+                    document.addEventListener( eventtype, bodyClickFn );
+                }
 			});
 		} );
 
@@ -1127,6 +1130,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 	init();
 
 })();
+
 jQuery.noConflict();
 
 (function($, window, document) {
@@ -1140,8 +1144,29 @@ jQuery.noConflict();
         pagePilling: function () {
             $('#page').pagepiling({
                 anchors: ['1', '2'],
-                menu: '#menu'
+                navigation: {
+                    'textColor': '#000',
+                    'bulletsColor': '#fff',
+                    'position': 'right',
+                    'tooltips': ['Home', 'O nas', 'Portfolio', 'Kontakt']
+                },
+                menu: '#menu',
+                afterLoad: function(anchorLink, index) {
+                    if ($('#st-container').hasClass('st-menu-open')) {
+                        $('#st-container').removeClass('st-menu-open');
+                    }
+                }
             });
+        },
+
+        clicks: function () {
+            $('#go-to-home').on('click', function () {
+                $('#page').pagepiling.moveTo(1);
+            });
+
+            if ($('#st-container').hasClass('st-menu-open')) {
+                $('#st-container').removeClass('st-menu-open');
+            }
         }
 
         // scrollEvent: function() {

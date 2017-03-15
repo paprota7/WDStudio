@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'Sarine';
+  src: url('../fonts/Sarine-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sarine';
+  font-weight: 500;
+  src: url('../fonts/Sarine-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sarine';
+  font-weight: 700;
+  src: url('../fonts/Sarine-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: $f-sarine;
+}
+
+h1 {
+    font-size: 0;
+}
+
 *,
 *:after,
 *:before {

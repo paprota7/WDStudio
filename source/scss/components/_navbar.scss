@@ -1,7 +1,7 @@
 .navbar {
-	-webkit-box-shadow: 3px 0px 30px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 3px 0px 30px 0px rgba(0,0,0,0.75);
-	box-shadow: 3px 0px 30px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 3px 0 30px 0 rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 0 30px 0 rgba(0,0,0,0.75);
+	box-shadow: 3px 0 30px 0 rgba(0,0,0,0.75);
 
 	&__logo {
 		max-width: 100%;
@@ -13,22 +13,75 @@
 		top: 25px;
 		left: 35px;
 		z-index: 3;
+		@include clearfix;
 
 		button {
 			font-size: 0;
 			border: none;
+			display: block;
+			float: left;
 			background-color: transparent;
+			transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+			transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
 
 			.bar {
 				width: 48px;
 				height: 4px;
 				display: block;
 				border-radius: 3px;
-				background-color: $c-black;
+				background-color: $c-white;
+				transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+        		transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
 
 				+ .bar {
 					margin-top: 10px;
 				}
+			}
+
+		}
+
+		.text {
+			display: block;
+			float: left;
+			position: relative;
+			overflow: hidden;
+			width: 100px;
+			color: $c-white;
+
+			span {
+				font-size: 30px;
+				display: block;
+				position: relative;
+				line-height: 34px;
+				margin-left: 10px;
+				letter-spacing: -1px;
+				transform: translateX(-100%);
+				transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+				transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+			}
+		}
+
+		&:hover {
+			button {
+				margin-top: 7px;
+				margin-left: -15px;
+
+				.bar:first-child {
+					transform: rotate(-28deg);
+					margin-left: -3px;
+					margin-bottom: -7px;
+					width: 32px;
+				}
+				.bar:last-child {
+					transform: rotate(28deg);
+					margin-left: -3px;
+					margin-top: 3px;
+					width: 32px;
+				}
+			}
+
+			.text span {
+				transform: translateX(0);
 			}
 		}
 
@@ -51,24 +104,19 @@
 
 		li {
 			a {
-				@media (min-width: $screen-md-min) {
-					display: block;
-					text-align: right;
-					text-decoration: none;
-					font-size: 20px;
-    				padding: 12px 40px 12px 0;
-					text-transform: uppercase;
-					transition: all 0.4s;
-					@include link($c-white, $c-white, $c-light-gray, $c-light-gray);
-				}
-
+				display: block;
+				text-align: right;
+				text-decoration: none;
+				font-size: 20px;
+				padding: 12px 40px 12px 0;
+				transition: all 0.4s;
+				@include link($c-white, $c-white, $c-light-gray, $c-light-gray);
 			}
+
 			&:hover {
 				a {
-					@media (min-width: $screen-md-min) {
-						transform: scale(1.1);
-						margin: 0 8px 0 0;
-					}
+					transform: scale(1.1);
+					margin: 0 13px 0 0;
 				}
 			}
 		}

@@ -11,8 +11,29 @@ jQuery.noConflict();
         pagePilling: function () {
             $('#page').pagepiling({
                 anchors: ['1', '2'],
-                menu: '#menu'
+                navigation: {
+                    'textColor': '#000',
+                    'bulletsColor': '#fff',
+                    'position': 'right',
+                    'tooltips': ['Home', 'O nas', 'Portfolio', 'Kontakt']
+                },
+                menu: '#menu',
+                afterLoad: function(anchorLink, index) {
+                    if ($('#st-container').hasClass('st-menu-open')) {
+                        $('#st-container').removeClass('st-menu-open');
+                    }
+                }
             });
+        },
+
+        clicks: function () {
+            $('#go-to-home').on('click', function () {
+                $('#page').pagepiling.moveTo(1);
+            });
+
+            if ($('#st-container').hasClass('st-menu-open')) {
+                $('#st-container').removeClass('st-menu-open');
+            }
         }
 
         // scrollEvent: function() {
