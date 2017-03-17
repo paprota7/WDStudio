@@ -6,6 +6,8 @@ jQuery.noConflict();
     window.wdstudio = {
         init: function() {
             this.pagePilling();
+            this.clicks();
+            this.socials();
         },
 
         pagePilling: function () {
@@ -23,6 +25,13 @@ jQuery.noConflict();
                         $('#st-container').removeClass('st-menu-open');
                     }
                 }
+            });
+        },
+
+        socials: function () {
+            SocialShareKit.init({
+                url: 'http://wdstudio.eu/',
+                text: 'Web Development, tylko z WDStudio!'
             });
         },
 
