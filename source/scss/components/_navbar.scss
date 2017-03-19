@@ -4,16 +4,37 @@
 	box-shadow: 3px 0 30px 0 rgba(0,0,0,0.75);
 
 	&__logo {
-		max-width: 100%;
-		padding: 25px 60px 0;
+		img {
+			max-width: 100%;
+			padding: 25px 60px 0;
+			@media (min-width: $screen-md-min) {
+				transition: all 0.4s;
+			}
+		}
+
+		&:hover {
+			img {
+				@media (min-width: $screen-md-min) {
+					transform: scale(1.1);
+				}
+			}
+		}
 	}
 
 	&__open {
 		position: absolute;
-		top: 25px;
-		left: 35px;
 		z-index: 3;
 		@include clearfix;
+
+		@media (min-width: $screen-md-min) {
+			top: 22px;
+			left: 20px;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			top: 20px;
+			left: 15px;
+		}
 
 		button {
 			font-size: 0;
@@ -21,20 +42,36 @@
 			display: block;
 			float: left;
 			background-color: transparent;
-			transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
-			transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+			@media (min-width: $screen-md-min) {
+				transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+				transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+			}
 
 			.bar {
-				width: 48px;
-				height: 4px;
 				display: block;
 				border-radius: 3px;
-				background-color: $c-white;
-				transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
-        		transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+				background-color: $c-cyan;
+
+				@media (min-width: $screen-md-min) {
+					width: 48px;
+					height: 4px;
+					transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+					transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+				}
+
+				@media (max-width: $screen-sm-max) {
+					width: 32px;
+					height: 3px;
+				}
 
 				+ .bar {
-					margin-top: 10px;
+					@media (min-width: $screen-md-min) {
+						margin-top: 10px;
+					}
+
+					@media (max-width: $screen-sm-max) {
+						margin-top: 7px;
+					}
 				}
 			}
 
@@ -46,7 +83,7 @@
 			position: relative;
 			overflow: hidden;
 			width: 100px;
-			color: $c-white;
+			color: $c-cyan;
 
 			span {
 				font-size: 30px;
@@ -54,34 +91,45 @@
 				position: relative;
 				line-height: 34px;
 				margin-left: 10px;
+				font-weight: 500;
 				letter-spacing: -1px;
 				transform: translateX(-100%);
-				transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
-				transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+				@media (min-width: $screen-md-min) {
+					transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+					transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+				}
 			}
 		}
 
 		&:hover {
 			button {
-				margin-top: 7px;
-				margin-left: -15px;
+				@media (min-width: $screen-md-min) {
+					margin-top: 7px;
+					margin-left: -15px;
+				}
 
 				.bar:first-child {
-					transform: rotate(-28deg);
-					margin-left: -3px;
-					margin-bottom: -7px;
-					width: 32px;
+					@media (min-width: $screen-md-min) {
+						transform: rotate(-28deg);
+						margin-left: -3px;
+						margin-bottom: -7px;
+						width: 32px;
+					}
 				}
 				.bar:last-child {
-					transform: rotate(28deg);
-					margin-left: -3px;
-					margin-top: 3px;
-					width: 32px;
+					@media (min-width: $screen-md-min) {
+						transform: rotate(28deg);
+						margin-left: -3px;
+						margin-top: 3px;
+						width: 32px;
+					}
 				}
 			}
 
 			.text span {
-				transform: translateX(0);
+				@media (min-width: $screen-md-min) {
+					transform: translateX(0);
+				}
 			}
 		}
 
@@ -107,16 +155,22 @@
 				display: block;
 				text-align: right;
 				text-decoration: none;
-				font-size: 20px;
+				font-size: 23px;
 				padding: 12px 40px 12px 0;
-				transition: all 0.4s;
-				@include link($c-white, $c-white, $c-light-gray, $c-light-gray);
+				text-shadow: 0 -2px $c-dark-gray-2;
+				@media (min-width: $screen-md-min) {
+					transition: all 0.4s;
+				}
+				@include link($c-white, $c-white, $c-cyan, $c-cyan);
 			}
 
 			&:hover {
 				a {
-					transform: scale(1.1);
-					margin: 0 13px 0 0;
+					text-shadow: 0 -2px $c-cyan-2;
+					@media (min-width: $screen-md-min) {
+						transform: scale(1.1);
+						margin: 0 13px 0 0;
+					}
 				}
 			}
 		}
@@ -125,7 +179,7 @@
 	&__socials {
 		position: absolute;
 		bottom: 25px;
-		left: 50%;
-		transform: translateX(-50%);
+		width: 100%;
+		text-align: center;
 	}
 }

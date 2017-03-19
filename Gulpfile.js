@@ -75,8 +75,8 @@ gulp.task('browserSync:init', function() {
         server: {
             baseDir: ''
         },
-    })
-})
+    });
+});
 
 gulp.task('watch', ['browserSync:init', 'sprite', 'sass', 'js', 'html'], function() {
     gulp.watch('source/sprites/*.*', ['sprite']);

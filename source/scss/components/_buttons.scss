@@ -1,0 +1,43 @@
+.button {
+    display: block;
+    position: relative;
+    margin: 10px;
+    transition: all 0.1s;
+    text-decoration: none;
+    color: $c-white;
+    border: none;
+    border-bottom: 5px solid $c-cyan-2;
+    border-radius: 10px;
+    background-color: $c-cyan;
+    width: 300px;
+    max-width: 100%;
+    text-shadow: 0 -2px $c-cyan-2;
+    font-size: 25px;
+    @media (min-width: $screen-sm-min) {
+        padding: 10px 40px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        padding: 10px 5px;
+    }
+
+    &:hover {
+        @media (min-width: $screen-md-min) {
+            transform: translate(0px, 5px);
+            -webkit-transform: translate(0px, 5px);
+            border-bottom: 1px solid $c-cyan-2;
+		}
+    }
+
+    &--center {
+        margin: 10px auto;
+    }
+
+    &--left {
+        float: left;
+    }
+
+    &-right {
+        float: right;
+    }
+}

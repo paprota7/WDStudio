@@ -2,14 +2,20 @@
 	color: $link;
 
 	&:visited {
-		color: $visit;
+		@media (min-width: $screen-md-min) {
+			color: $visit;
+		}
 	}
 
 	&:hover {
-		color: $hover;
+		@media (min-width: $screen-md-min) {
+			color: $hover;
+		}
 	}
 
 	&:active {
-		color: $active;
+		@media (min-width: $screen-md-min) {
+			color: $active;
+		}
 	}
 }

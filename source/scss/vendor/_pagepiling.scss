@@ -39,10 +39,22 @@ html, body {
     opacity: 1;
 }
 #pp-nav.right {
-    right: 17px;
+    @media (min-width: $screen-sm-min) {
+        right: 17px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        right: 0px;
+    }
 }
 #pp-nav.left {
-    left: 17px;
+    @media (min-width: $screen-sm-min) {
+        left: 17px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        left: 0px;
+    }
 }
 .pp-section.pp-table{
     display: table;
@@ -108,11 +120,14 @@ html, body {
     z-index: 1;
 }
 .pp-tooltip {
+    @media (max-width: $screen-sm-max) {
+        display: none !important;
+    }
     position: absolute;
     top: -2px;
-    color: #fff;
+    color: #000;
     font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
+    font-family: 'Pacifico', cursive;
     white-space: nowrap;
     max-width: 220px;
 }

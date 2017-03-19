@@ -15,7 +15,7 @@ jQuery.noConflict();
                 anchors: ['1', '2'],
                 navigation: {
                     'textColor': '#000',
-                    'bulletsColor': '#fff',
+                    'bulletsColor': '#000',
                     'position': 'right',
                     'tooltips': ['Home', 'O nas', 'Portfolio', 'Kontakt']
                 },

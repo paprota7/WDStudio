@@ -2,22 +2,54 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	@media (min-width: $screen-md-min) {
-		-webkit-box-shadow: inset 0 0 86px -12px rgba(0,0,0,0.75);
-		-moz-box-shadow: inset 0 0 86px -12px rgba(0,0,0,0.75);
-		box-shadow: inset 0 0 86px -12px rgba(0,0,0,0.75);
-	}
 
-	&__logo {
-		@media (min-width: $screen-md-min) {
-			display: block;
-			margin: 0 auto;
-		}
-	}
-
-	&__title {
+	&__home {
 		background-size: cover;
 		background-position: center center;
 		background-image: url('../images/background.jpg');
+
+		&__logo {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			@media (min-width: $screen-sm-min) {
+				width: 400px;
+			}
+
+			@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+				width: 250px;
+			}
+		}
+
+		&__desc {
+			position: relative;
+			text-align: center;
+			@media (min-width: $screen-sm-min) {
+				max-width: 600px;
+				font-size: 24px;
+				margin: 40px auto 65px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				font-size: 18px;
+				padding: 0 20px;
+				margin: 5px auto 0px;
+			}
+
+			&:after {
+				@media (min-width: $screen-md-min) {
+					content: '';
+					position: absolute;
+					border-radius: 3px;
+					background-color: rgba($c-cyan, 0.2);
+					z-index: -1;
+					top: -10px;
+					left: -10px;
+					right: -10px;
+					bottom: -10px;
+					transform: rotate(2deg) skewX(-2deg);
+				}
+			}
+		}
 	}
 }
