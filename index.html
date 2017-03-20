@@ -15,15 +15,16 @@
 <body>
 	<div id="st-container" class="st-container">
 		<nav class="st-menu st-effect-11 navbar" id="menu-1">
-			<a href="#1" id="go-to-home" class="navbar__logo"><img src="./images/logo-white.svg" alt="Web Design Studio"></a>
+			<a href="#home" class="navbar__logo go-to-section"><img src="./images/logo-white.svg" alt="Web Design Studio"></a>
 			<ul class="navbar__menu" id="menu">
-				<li data-menuanchor="2"><a href="#2">Co robimy</a></li>
-				<li data-menuanchor="3"><a href="#3">Portfolio</a></li>
-				<li data-menuanchor="4"><a href="#4">Kontakt</a></li>
+				<li data-menuanchor="ability"><a href="#ability">Co robimy</a></li>
+				<li data-menuanchor="about"><a href="#about">O nas</a></li>
+				<li data-menuanchor="portfolio"><a href="#portfolio">Portfolio</a></li>
+				<li data-menuanchor="contact"><a href="#contact">Kontakt</a></li>
 			</ul>
 			<div class="navbar__socials ssk-group ssk-lg">
-			    <a href="" class="ssk ssk-facebook"></a>
-			    <a href="" class="ssk ssk-twitter"></a>
+			    <a href="#" class="ssk ssk-facebook"></a>
+			    <a href="#" class="ssk ssk-twitter"></a>
 				<a href="https://github.com/paprota7" target="_blank" class="ssk ssk-github"></a>
 			</div>
 		</nav>
@@ -35,7 +36,6 @@
 					<span class="bar"></span>
 					<span class="bar"></span>
 				</button>
-				<span class="text"><span>Menu</span></span>
 			</div>
 
 			<section class="page__home section">
@@ -51,10 +51,10 @@
 							</p>
 							<div class="row">
 								<div class="col-xs-6">
-									<button class="button button--center">Co robimy?</button>
+									<button href="#ability" class="button button--center go-to-section">Co robimy?</button>
 								</div>
 								<div class="col-xs-6">
-									<button class="button button--center">O nas?</button>
+									<button href="#about" class="button button--center go-to-section">O nas?</button>
 								</div>
 							</div>
 						</div>
@@ -74,43 +74,25 @@
 								<nav class="tabs__nav">
 									<ul>
 										<li>
-											<a href="#tabs-1">
+											<a href="#psd-html">
 												<img src="./images/ico-html.svg" alt="PSD to HTML">
 												<span>PSD to HTML</span>
 											</a>
 										</li>
 										<li>
-											<a href="#tabs-2">
+											<a href="#cms">
 												<img src="./images/ico-CMS.svg" alt="CMS">
 												<span>Cms</span>
 											</a>
 										</li>
 										<li>
-											<a href="#tabs-3">
-												<img src="./images/ico-responsive.svg" alt="Responsive">
-												<span>Responsive</span>
-											</a>
-										</li>
-										<li>
-											<a href="#tabs-4">
+											<a href="#ecommerce">
 												<img src="./images/ico-ecommerce.svg" alt="E-Commerce">
 												<span>E-Commerce</span>
 											</a>
 										</li>
 										<li>
-											<a href="#tabs-5">
-												<img src="./images/ico-seo.svg" alt="SEO">
-												<span>SEO</span>
-											</a>
-										</li>
-										<li>
-											<a href="#tabs-6">
-												<img src="./images/ico-servers.svg" alt="Servers">
-												<span>Servers</span>
-											</a>
-										</li>
-										<li>
-											<a href="#tabs-7">
+											<a href="#support">
 												<img src="./images/ico-support.svg" alt="Support">
 												<span>Support</span>
 											</a>
@@ -118,22 +100,55 @@
 									</ul>
 								</nav>
 								<div class="tabs__content">
-									<article class="tabs__content__item" id="tabs-1">
+									<article class="tabs__content__item" id="psd-html">
 										<h3>PSD to HTML</h3>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+											Zajmujemy się cięciem PSD, PNG, AI, PDF i Sketch do HTML5, CSS3 oraz JavaScript z użyciem jQuery.
+										</p>
+										<p>
+											Kod który od nas otrzymasz jest czysty i czytelny, napisany w zgodności ze standardami Semantyki - dbamy o to by był on przyjazny zarówno dla użytkownika jak i dla większości przegldarek.
+										</p>
+										<p>
+											Organizacja kodu, znajomość dobrych praktyk SEO oraz modularna struktura sprawiają, że nasze projekty świetnie się prezentują na wszystkich urządzeniach, również Retina.
+										</p>
+										<p>
+											Każdy projekt optymalizujemy pod kątem szybkości wczytywania!
 										</p>
 									</article>
-									<article class="tabs__content__item" id="tabs-2">
+									<article class="tabs__content__item" id="cms">
 										<h3>CMS</h3>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+											Wychodzac na przeciw klientom bardziej wymagajacym oferujemy pisanie własnych CMSów od zera, jak i implementację już istniejcych CMSów typu WordPress, Joomla, Drupal itd.
+										</p>
+										<p>
+											Dostosowujmy własnego CMSa jak i sitniejcych CMSów do potrzeb klient i jak i użytkowników danego CMSa.
+										</p>
+										<p>
+											Wszystko to z zachowaniem standardów Sematyki, oraz zgodności z większościa przegldarek jak i poprawnego wywietlania na urzdzeniach mobilnych.
+										</p>
+										<p>
+											Oferujemy również hostingowanie stron internetowych z cała obsługa od strony serwera i zabezpieczenia strony/serwera przed włamaniami i róznego rodzaju exploitami.
 										</p>
 									</article>
-									<article class="tabs__content__item" id="tabs-3">
-										<h3>Responsive</h3>
+									<article class="tabs__content__item" id="ecommerce">
+										<h3>E-Commerce</h3>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+											Sklepy internetowe do powoli co raz badziej popularny sposób na sprzedaż przedmiotów czy usług. Stajemy na przeciw najbardziej wygajcym klientom i dla tego wybraliśmy bardzo rozwojowy framework jakim jest Magento 1.
+										</p>
+										<p>
+											Magento oferuje wszechstronne zastosowanie z możliwościa tworzenia małych sklepów z kilkoma artykułami jak i sklepów z wielkimi stanami magazynowimi, z możliwościa obsługi wielu magazynów jednocześnie.
+										</p>
+										<p>
+											W przypadku E-Commerce uczestniczymy w projekcie od momentu tworzenia designu i pomocy przy UX przez tworzenie sklepu po utrzymanie go z elementami pozycjonowania sklepu i cała analityke webowa (m.in. Analytics, Adwords)
+										</p>
+									</article>
+									<article class="tabs__content__item" id="support">
+										<h3>Suppport</h3>
+										<p>
+											W naszej ofercie znajduje się równiez utrzymanie Stron/CMSów/Sklepów.
+										</p>
+										<p>
+											Supportujemy strony tworzony przez nasza firmę jak i przejmujemy już istniejace strony i zapewniamy kompleksowa usługe utrzymania sklepu wraz z wdrażaniem nowych elementów.
 										</p>
 									</article>
 								</div>
@@ -142,7 +157,25 @@
 					</div>
 				</div>
 			</section>
+			<section class="page__about section">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+
+						</div>
+					</div>
+				</div>
+			</section>
 			<section class="page__portfolio section">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__kontakt section">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">

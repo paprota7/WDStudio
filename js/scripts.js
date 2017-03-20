@@ -1168,12 +1168,12 @@ jQuery.noConflict();
 
         pagePilling: function() {
             $('#page').pagepiling({
-                anchors: ['1', '2'],
+                anchors: ['home', 'ability', 'about', 'portfolio', 'contact'],
                 navigation: {
                     'textColor': '#000',
                     'bulletsColor': '#000',
                     'position': 'right',
-                    'tooltips': ['Home', 'O nas', 'Portfolio', 'Kontakt']
+                    'tooltips': ['Strona Główna', 'Co robimy', 'O nas', 'Portfolio', 'Kontakt']
                 },
                 menu: '#menu',
                 afterLoad: function(anchorLink, index) {
@@ -1192,8 +1192,8 @@ jQuery.noConflict();
         },
 
         clicks: function() {
-            $('#go-to-home').on('click', function() {
-                $('#page').pagepiling.moveTo(1);
+            $('.go-to-section').on('click', function() {
+                $('#page').pagepiling.moveTo($(this).attr('href').replace('#', ''));
             });
 
             if ($('#st-container').hasClass('st-menu-open')) {

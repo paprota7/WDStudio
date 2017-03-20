@@ -6,12 +6,10 @@
     text-decoration: none;
     color: $c-white;
     border: none;
-    border-bottom: 5px solid $c-cyan-2;
-    border-radius: 10px;
-    background-color: $c-cyan;
+    background-color: $c-black;
     width: 300px;
     max-width: 100%;
-    text-shadow: 0 -2px $c-cyan-2;
+    text-shadow: 0 -2px $c-dark-gray;
     font-size: 25px;
     @media (min-width: $screen-sm-min) {
         padding: 10px 40px;
@@ -23,9 +21,7 @@
 
     &:hover {
         @media (min-width: $screen-md-min) {
-            transform: translate(0px, 5px);
-            -webkit-transform: translate(0px, 5px);
-            border-bottom: 1px solid $c-cyan-2;
+            transform: scale(0.95);
 		}
     }
 

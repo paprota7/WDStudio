@@ -12,7 +12,7 @@
             padding: 0 15px;
         }
         @media (max-width: $screen-sm-max) {
-            padding: 10px 0;
+            padding: 10px 0 0;
             clear: both;
         }
 
@@ -50,16 +50,16 @@
                     span {
                         opacity: 0;
                         @media (min-width: $screen-md-min) {
-                            display: block;
-                            font-size: 12px;
-                            text-align: right;
-                            position: absolute;
                             top: 50%;
                             width: 200px;
+                            display: block;
+                            font-size: 12px;
                             padding: 5px 10px;
+                            text-align: right;
+                            position: absolute;
+                            transition: all 1s;
                             transform: translate(-100%, -50%);
-        					transition: all 1s;
-                            @include link($c-cyan-2, $c-cyan-2, $c-cyan-2, $c-cyan-2);
+                            @include link($c-black, $c-black, $c-black, $c-black);
         				}
                         @media (max-width: $screen-sm-max) {
                             display: none;
@@ -91,7 +91,7 @@
                 display: block;
                 position: absolute;
                 right: 10px;
-                background-color: $c-cyan;
+                background-color: $c-black;
             }
             @media (max-width: $screen-sm-max) {
                 display: none;
@@ -101,15 +101,16 @@
 
     &__content {
         overflow: hidden;
-        padding: 25px 15px 25px 25px;
         @include clearfix;
 
         @media (min-width: $screen-md-min) {
             width: 90%;
             float: left;
+            padding: 5px 15px 15px 15px;
         }
         @media (max-width: $screen-sm-max) {
             clear: both;
+            padding: 20px 15px 15px 15px;
         }
 
         &__item {

@@ -44,7 +44,7 @@ html, body {
     }
 
     @media (max-width: $screen-xs-max) {
-        right: 0px;
+        right: 5px;
     }
 }
 #pp-nav.left {
@@ -53,7 +53,7 @@ html, body {
     }
 
     @media (max-width: $screen-xs-max) {
-        left: 0px;
+        left: 5px;
     }
 }
 .pp-section.pp-table{
@@ -87,7 +87,7 @@ html, body {
     display: block;
     width: 14px;
     height: 13px;
-    margin: 7px;
+    margin: 12px 0;
     position:relative;
 }
 .pp-slidesNav li {
@@ -104,20 +104,20 @@ html, body {
     text-decoration: none;
 }
 #pp-nav li .active span,
-.pp-slidesNav .active span {
-    background: #333;
+.pp-slidesNav .active span,
+#pp-nav li:hover span {
+    transform: scale(2);
 }
 #pp-nav span,
 .pp-slidesNav span {
-    top: 2px;
-    left: 2px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    background: #000;
     position: absolute;
     z-index: 1;
+    transition: transform 0.5s;
 }
 .pp-tooltip {
     @media (max-width: $screen-sm-max) {
