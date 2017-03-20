@@ -124,7 +124,7 @@ html, body {
         display: none !important;
     }
     position: absolute;
-    top: -2px;
+    top: -8px;
     color: #000;
     font-size: 14px;
     font-family: 'Pacifico', cursive;
@@ -138,6 +138,6 @@ html, body {
     left: 20px;
 }
 .pp-scrollable{
-    overflow-y: scroll;
-    height: 100%;
+    overflow-y: auto;
+    // height: 100%;
 }

@@ -6,7 +6,7 @@
 	&__home {
 		background-size: cover;
 		background-position: center center;
-		background-image: url('../images/background.jpg');
+		background-image: url('../images/background-home.jpg');
 
 		&__logo {
 			display: block;
@@ -24,6 +24,7 @@
 		&__desc {
 			position: relative;
 			text-align: center;
+			font-family: 'Pacifico', cursive;
 			@media (min-width: $screen-sm-min) {
 				max-width: 600px;
 				font-size: 24px;
@@ -50,6 +51,18 @@
 					transform: rotate(2deg) skewX(-2deg);
 				}
 			}
+		}
+	}
+	&__ability {
+		background-size: cover;
+		background-position: center center;
+		background-image: url('../images/background-ability.jpg');
+		@media (min-width: $screen-sm-min) {
+			padding: 60px 0 0;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			padding: 40px 0 0;
 		}
 	}
 }

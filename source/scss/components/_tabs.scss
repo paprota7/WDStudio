@@ -1,0 +1,117 @@
+.tabs {
+    position: relative;
+    @include clearfix;
+
+    &__nav {
+        position: relative;
+        float: left;
+        @include clearfix;
+
+        @media (min-width: $screen-md-min) {
+            width: 10%;
+            padding: 0 15px;
+        }
+        @media (max-width: $screen-sm-max) {
+            padding: 10px 0;
+            clear: both;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            @include clearfix;
+            li {
+                @media (max-width: $screen-sm-max) {
+                    float: left;
+                    display: block;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    text-decoration: none;
+
+                    @media (min-width: $screen-md-min) {
+                        padding: 5px;
+                    }
+                    @media (max-width: $screen-sm-max) {
+                        padding: 2px;
+                    }
+
+                    img {
+                        display: block;
+                        width: 60px;
+                        margin: 0 auto;
+                        max-width: 100%;
+                        @media (min-width: $screen-md-min) {
+        					transition: all 0.4s;
+        				}
+                    }
+                    span {
+                        opacity: 0;
+                        @media (min-width: $screen-md-min) {
+                            display: block;
+                            font-size: 12px;
+                            text-align: right;
+                            position: absolute;
+                            top: 50%;
+                            width: 200px;
+                            padding: 5px 10px;
+                            transform: translate(-100%, -50%);
+        					transition: all 1s;
+                            @include link($c-cyan-2, $c-cyan-2, $c-cyan-2, $c-cyan-2);
+        				}
+                        @media (max-width: $screen-sm-max) {
+                            display: none;
+                        }
+                    }
+
+                    &:hover {
+                        img {
+                            @media (min-width: $screen-md-min) {
+            					transform: scale(1.1) rotate(4deg);
+            				}
+                        }
+
+                        span {
+                            @media (min-width: $screen-md-min) {
+                                opacity: 1;
+            				}
+                        }
+                    }
+                }
+            }
+        }
+
+        .dot {
+            @media (min-width: $screen-md-min) {
+                width: 4px;
+                height: 4px;
+                border-radius: 2px;
+                display: block;
+                position: absolute;
+                right: 10px;
+                background-color: $c-cyan;
+            }
+            @media (max-width: $screen-sm-max) {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        padding: 25px 15px 25px 25px;
+        @include clearfix;
+
+        @media (min-width: $screen-md-min) {
+            width: 90%;
+            float: left;
+        }
+
+        &__item {
+            display: none;
+            float: left;
+        }
+    }
+}
