@@ -101,13 +101,15 @@
 
     &__content {
         overflow: hidden;
-        clear: both;
         padding: 25px 15px 25px 25px;
         @include clearfix;
 
         @media (min-width: $screen-md-min) {
             width: 90%;
             float: left;
+        }
+        @media (max-width: $screen-sm-max) {
+            clear: both;
         }
 
         &__item {
