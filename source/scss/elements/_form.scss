@@ -1,0 +1,51 @@
+.form {
+	&__input {
+		input {
+			width: 100%;
+			margin-bottom: 20px;
+			padding: 10px 5px;
+			color: $c-black;
+			border: none;
+			border-bottom: 2px solid $c-black;
+			background-color: transparent;
+			font-family: 'Sarine', sans-serif;
+			font-weight: 500;
+			@include placeholder {
+				color: $c-black;
+				font-family: 'Sarine', sans-serif;
+				font-size: 18px;
+				font-weight: 500;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&__textarea {
+		textarea {
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 20px;
+			padding: 10px 5px;
+			color: $c-black;
+			border: none;
+			min-height: 150px;
+			border-bottom: 2px solid $c-black;
+			background-color: transparent;
+			font-family: 'Sarine', sans-serif;
+			font-weight: 500;
+			@include placeholder {
+				color: $c-black;
+				font-family: 'Sarine', sans-serif;
+				font-size: 18px;
+				font-weight: 500;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}

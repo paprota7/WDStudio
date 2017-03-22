@@ -76,6 +76,22 @@ p {
     @media (max-width: $screen-sm-max) {
         font-size: 12px;
     }
+
+    a {
+        color: $c-black;
+        font-family: "Sarine", sans-serif;
+
+        @media (min-width: $screen-md-min) {
+            font-size: 18px;
+        }
+        @media (max-width: $screen-sm-max) {
+            font-size: 12px;
+        }
+
+        &:hover {
+            
+        }
+    }
 }
 
 *,
