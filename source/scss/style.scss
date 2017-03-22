@@ -5,18 +5,20 @@
 @import "vendor/_pagepiling";
 @import "vendor/_menu";
 @import "vendor/_socials";
+@import "vendor/_gallery";
 
 // Sprites
 // =========================
 @import "_sprites";
 
-// Components
+// elements
 // =========================
-@import "components/_vars";
-@import "components/_mixins";
-@import "components/_buttons";
-@import "components/_base";
-@import "components/_navbar";
-@import "components/_page";
-@import "components/_tabs";
-@import "components/_technologies";
+@import "elements/_vars";
+@import "elements/_mixins";
+@import "elements/_buttons";
+@import "elements/_base";
+@import "elements/_navbar";
+@import "elements/_page";
+@import "elements/_tabs";
+@import "elements/_technologies";
+@import "elements/_preloader";

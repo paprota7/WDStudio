@@ -9,6 +9,8 @@ jQuery.noConflict();
             this.clicks();
             this.socials();
             this.tabs();
+            $('.preloader').hide('fade', 1000);
+            $('#dg-container').gallery();
         },
 
         pagePilling: function() {
@@ -54,13 +56,13 @@ jQuery.noConflict();
                 status = true;
 
             content.find('.tabs__content__item:first-child').addClass('active');
-            nav.append('<span class="dot"></span>').find('.dot').css('top', nav.find('li:first-child a').position().top + (nav.find('li:first-child a').outerHeight()/2));
+            nav.append('<span class="dot"></span>').find('.dot').css('top', nav.find('li:first-child a').position().top + (nav.find('li:first-child a').outerHeight() / 2));
 
-            var navResize = function () {
+            var navResize = function() {
                 if ($(window).outerWidth(true) <= (nav.outerWidth() + 30)) {
                     if (navMode === 'desktop' || navMode === '') {
                         var items = nav.find('> ul > li'),
-                            width = (100/items.length) + '%';
+                            width = (100 / items.length) + '%';
 
                         navMode = 'mobile';
 
@@ -87,7 +89,7 @@ jQuery.noConflict();
                 if (!next.hasClass('active') && next.length > 0 && status) {
                     status = false;
                     dot.animate({
-                        top: clicked.position().top + (clicked.outerHeight()/2)
+                        top: clicked.position().top + (clicked.outerHeight() / 2)
                     }, 1000);
                     previous.hide('slide', {
                         direction: 'right'
@@ -105,7 +107,7 @@ jQuery.noConflict();
 
             navResize();
 
-            $(window).on('resize', function () {
+            $(window).on('resize', function() {
                 navResize();
             });
         }

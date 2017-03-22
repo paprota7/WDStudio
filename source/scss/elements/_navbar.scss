@@ -10,6 +10,9 @@
 			@media (min-width: $screen-md-min) {
 				transition: all 0.4s;
 			}
+			@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+				padding: 5px 60px 0;
+			}
 		}
 
 		&:hover {
@@ -114,10 +117,15 @@
 				text-decoration: none;
 				font-size: 23px;
 				padding: 12px 40px 12px 0;
+				@include link($c-white, $c-white, $c-white, $c-white);
 				@media (min-width: $screen-md-min) {
 					transition: all 0.4s;
 				}
-				@include link($c-white, $c-white, $c-white, $c-white);
+
+				@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+					font-size: 18px;
+					padding: 0 40px 0 0;
+				}
 			}
 
 			&:hover {
@@ -136,5 +144,9 @@
 		bottom: 25px;
 		width: 100%;
 		text-align: center;
+
+		@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+			bottom: 5px;
+		}
 	}
 }

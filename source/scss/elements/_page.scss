@@ -6,7 +6,7 @@
 	&__home {
 		background-size: cover;
 		background-position: center center;
-		background-image: url('../images/background-home.jpg');
+		background-image: url('../images/background/background-home.jpg');
 
 		&__logo {
 			display: block;
@@ -48,7 +48,6 @@
 					left: -10px;
 					right: -10px;
 					bottom: -10px;
-					transform: rotate(2deg) skewX(-2deg);
 				}
 			}
 		}
@@ -56,19 +55,19 @@
 	&__ability {
 		background-size: cover;
 		background-position: center center;
-		background-image: url('../images/background-ability.jpg');
+		background-image: url('../images/background/background-ability.jpg');
 		@media (min-width: $screen-sm-min) {
 			padding: 180px 0 0;
 		}
 
 		@media (max-width: $screen-xs-max) {
-			padding: 30px 0 0;
+			padding: 45px 0 0;
 		}
 	}
 	&__about {
 		background-size: cover;
 		background-position: center center;
-		background-image: url('../images/background-about.jpg');
+		background-image: url('../images/background/background-about.jpg');
 
 		p {
 			@media (min-width: $screen-sm-min) {
@@ -84,6 +83,19 @@
 				padding: 0 20px;
 				font-size: 14px;
 				text-align: center;
+			}
+		}
+	}
+	&__portfolio {
+		background-size: cover;
+		background-position: center center;
+		background-image: url('../images/background/background-portfolio.jpg');
+		@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+			padding-top: 35px;
+		}
+		h2 {
+			@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+				display: none;
 			}
 		}
 	}

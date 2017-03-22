@@ -13,6 +13,9 @@
 </head>
 
 <body>
+	<span id="preloader" class="preloader">
+
+	</span>
 	<div id="st-container" class="st-container">
 		<nav class="st-menu st-effect-11 navbar" id="menu-1">
 			<a href="#home" class="navbar__logo go-to-section"><img src="./images/logo-white.svg" alt="Web Design Studio"></a>
@@ -22,9 +25,9 @@
 				<li data-menuanchor="portfolio"><a href="#portfolio">Portfolio</a></li>
 				<li data-menuanchor="contact"><a href="#contact">Kontakt</a></li>
 			</ul>
-			<div class="navbar__socials ssk-group ssk-lg">
-			    <a href="#" class="ssk ssk-facebook"></a>
-			    <a href="#" class="ssk ssk-twitter"></a>
+			<div class="navbar__socials ssk-group ssk-grayscale ssk-lg">
+				<a href="#" class="ssk ssk-facebook"></a>
+				<a href="#" class="ssk ssk-twitter"></a>
 				<a href="https://github.com/paprota7" target="_blank" class="ssk ssk-github"></a>
 			</div>
 		</nav>
@@ -46,7 +49,7 @@
 								<img src="./images/logo.svg" alt="Web Design Studio" class="page__home__logo">
 								Web Design Studio
 							</h1>
-							<p class="page__home__desc">
+							<p class="page__home__desc after-load">
 								WDStudio, tworzymy z pasją! Z inspiracją robimy to co lubimy, a tworzenie i rozwój aplikacji internetowych to dla nas codzienność.
 							</p>
 							<div class="row">
@@ -165,7 +168,8 @@
 											<div class="col-md-9">
 												<h3>E-Commerce</h3>
 												<p>
-													Sklepy internetowe do powoli co raz badziej popularny sposób na sprzedaż przedmiotów czy usług. Stajemy na przeciw najbardziej wygajcym klientom i dla tego wybraliśmy bardzo rozwojowy framework jakim jest Magento, a dla mniej wymagajcych oferujemy również WooCommerce.
+													Sklepy internetowe do powoli co raz badziej popularny sposób na sprzedaż przedmiotów czy usług. Stajemy na przeciw najbardziej wygajcym klientom i dla tego wybraliśmy bardzo rozwojowy framework jakim jest Magento, a dla mniej wymagajcych oferujemy również
+													WooCommerce.
 												</p>
 												<p>
 													Magento oferuje wszechstronne zastosowanie z możliwościa tworzenia małych sklepów z kilkoma artykułami jak i sklepów z wielkimi stanami magazynowimi, z możliwościa obsługi wielu magazynów jednocześnie.
@@ -218,19 +222,40 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<p>
-								Od ponad 3 lat zajmujemy się stronami www i aplikacjami internetowymi. Naszym celem jest dostarczanie najwyższej jakości usług, cenimy kontakt z klientem i jesteśmy nadwyraz elastyczni. Nasza motywacja do działania jest pasja, to na łaczy dzieki czemu dostarczamy dla naszych klientow najwyższej jakości kodu
+								Od ponad 3 lat zajmujemy się stronami www i aplikacjami internetowymi. Naszym celem jest dostarczanie najwyższej jakości usług, cenimy kontakt z klientem i jesteśmy nadwyraz elastyczni. Nasza motywacja do działania jest pasja, to na łaczy dzieki czemu
+								dostarczamy dla naszych klientow najwyższej jakości kodu
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 			<section class="page__portfolio section">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-
-						</div>
+				<h2>Portfolio</h2>
+				<div id="dg-container" class="dg-container">
+					<div class="dg-wrapper">
+						<a href="http://www.mobilnestudiomakijazu.pl/" target="_blank">
+							<div class="dg-img-wrapper">
+								<img src="./images/portfolio/mobilnestudiomakijazu.jpg" alt="Mobilne Studio Makijazu">
+							</div>
+							<p>www.mobilnestudiomakijazu.pl</p>
+						</a>
+						<a href="http://www.wdstudio.eu/">
+							<div class="dg-img-wrapper">
+								<img src="./images/portfolio/wdstudio.jpg" alt="WDStudio">
+							</div>
+							<p>www.wdstudio.eu</p>
+						</a>
+						<a href="#">
+							<div class="dg-img-wrapper">
+								<img src="./images/portfolio/none.jpg" alt="None">
+							</div>
+							<p>Wkrótce...</p>
+						</a>
 					</div>
+					<nav>
+						<span class="dg-prev">&lsaquo;</span>
+						<span class="dg-next">&rsaquo;</span>
+					</nav>
 				</div>
 			</section>
 			<section class="page__kontakt section">
