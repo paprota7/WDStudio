@@ -9,12 +9,13 @@
 			border-bottom: 2px solid $c-black;
 			background-color: transparent;
 			font-family: 'Sarine', sans-serif;
-			font-weight: 500;
+			font-weight: 700;
 			@include placeholder {
 				color: $c-black;
+				opacity: 0.5;
 				font-family: 'Sarine', sans-serif;
 				font-size: 18px;
-				font-weight: 500;
+				font-weight: 700;
 			}
 
 			&:focus {
@@ -35,12 +36,13 @@
 			border-bottom: 2px solid $c-black;
 			background-color: transparent;
 			font-family: 'Sarine', sans-serif;
-			font-weight: 500;
+			font-weight: 700;
 			@include placeholder {
 				color: $c-black;
+				opacity: 0.5;
 				font-family: 'Sarine', sans-serif;
 				font-size: 18px;
-				font-weight: 500;
+				font-weight: 700;
 			}
 
 			&:focus {

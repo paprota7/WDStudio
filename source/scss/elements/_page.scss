@@ -101,9 +101,10 @@
 		}
 	}
 	&__contact {
-		background-size: cover;
-		background-position: center center;
-		background-image: url('../images/background/background-contact.jpg');
+		-webkit-box-shadow: inset 0px 0px 45px -12px rgba(0,0,0,0.75);
+		-moz-box-shadow: inset 0px 0px 45px -12px rgba(0,0,0,0.75);
+		box-shadow: inset 0px 0px 45px -12px rgba(0,0,0,0.75);
+		background-color: $c-white;
 		h2 {
 			margin-bottom: 40px;
 		}

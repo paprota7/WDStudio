@@ -30,6 +30,10 @@
                     position: relative;
                     display: block;
                     text-decoration: none;
+                    @media (min-width: $screen-md-min) {
+                        filter: grayscale(30%);
+                        transition: all 0.4s;
+                    }
 
                     @media (min-width: $screen-md-min) {
                         padding: 5px;
@@ -67,6 +71,9 @@
                     }
 
                     &:hover {
+                        @media (min-width: $screen-md-min) {
+                            filter: grayscale(0%);
+                        }
                         img {
                             @media (min-width: $screen-md-min) {
             					transform: scale(1.1) rotate(4deg);
