@@ -11,6 +11,7 @@ jQuery.noConflict();
             this.tabs();
             $('.preloader').hide('fade', 1000);
             $('#dg-container').gallery();
+            $('.popup').popup();
         },
 
         pagePilling: function() {

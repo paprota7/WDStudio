@@ -85,7 +85,6 @@
 			position: absolute;
 			left: 0;
 			top: 0;
-			cursor: pointer;
 			-webkit-border-radius: 6px;
 			-moz-border-radius: 6px;
 			border-radius: 6px;
@@ -143,7 +142,7 @@
 					padding: 13px 0 0;
 				}
 
-				&:after {
+				&.zoom:after {
 					@media (min-width: $screen-sm-min) {
 						content: '';
 						display: block;
@@ -155,9 +154,6 @@
 						opacity: 0;
 						transition: opacity 0.3s ease-in-out;
 						background: rgba(255, 255, 255, 0.4) url('../images/zoom.svg') no-repeat center center / 80px 80px;
-					}
-					@media (max-width: $screen-xs-max) {
-
 					}
 				}
 
@@ -173,7 +169,8 @@
 					display: block;
 				}
 
-				.dg-img-wrapper {
+				.dg-img-wrapper.zoom {
+					cursor: pointer;
 					&:hover {
 						transform: scale(1.05);
 						&:after {
