@@ -106,7 +106,19 @@
 		box-shadow: inset 0px 0px 45px -12px rgba(0,0,0,0.75);
 		background-color: $c-white;
 		h2 {
-			margin-bottom: 40px;
+			@media (min-width: $screen-sm-min) {
+				margin-bottom: 40px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				margin-bottom: 0;
+			}
+		}
+
+		p {
+			@media (max-width: $screen-xs-max) {
+				margin: 10px 0;
+			}
 		}
 	}
 }

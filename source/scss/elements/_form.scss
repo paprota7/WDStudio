@@ -2,21 +2,41 @@
 	&__input {
 		input {
 			width: 100%;
-			margin-bottom: 20px;
-			padding: 10px 5px;
 			color: $c-black;
 			border: none;
-			border-bottom: 2px solid $c-black;
 			background-color: transparent;
 			font-family: 'Sarine', sans-serif;
 			font-weight: 700;
+
 			@include placeholder {
 				color: $c-black;
 				opacity: 0.5;
-				font-family: 'Sarine', sans-serif;
-				font-size: 18px;
 				font-weight: 700;
+				font-family: 'Sarine', sans-serif;
+
 			}
+
+			@media (min-width: $screen-sm-min) {
+				padding: 10px 5px;
+				font-size: 18px;
+				margin-bottom: 20px;
+				border-bottom: 2px solid $c-black;
+				@include placeholder {
+					font-size: 18px;
+				}
+			}
+			@media (max-width: $screen-xs-max) {
+				padding: 2px 5px;
+				font-size: 12px;
+				margin-bottom: 5px;
+				border-bottom: 1px solid $c-black;
+				@include placeholder {
+					font-size: 12px;
+				}
+			}
+			@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+			}
+
 
 			&:focus {
 				outline: none;
@@ -28,21 +48,39 @@
 		textarea {
 			width: 100%;
 			max-width: 100%;
-			margin-bottom: 20px;
-			padding: 10px 5px;
 			color: $c-black;
 			border: none;
-			min-height: 150px;
-			border-bottom: 2px solid $c-black;
+			font-weight: 700;
 			background-color: transparent;
 			font-family: 'Sarine', sans-serif;
-			font-weight: 700;
+
 			@include placeholder {
 				color: $c-black;
 				opacity: 0.5;
-				font-family: 'Sarine', sans-serif;
-				font-size: 18px;
 				font-weight: 700;
+				font-family: 'Sarine', sans-serif;
+
+			}
+
+			@media (min-width: $screen-sm-min) {
+				padding: 10px 5px;
+				font-size: 18px;
+				margin-bottom: 20px;
+				min-height: 150px;
+				border-bottom: 2px solid $c-black;
+				@include placeholder {
+					font-size: 18px;
+				}
+			}
+			@media (max-width: $screen-xs-max) {
+				padding: 2px 5px;
+				font-size: 12px;
+				margin-bottom: 5px;
+				min-height: 80px;
+				border-bottom: 1px solid $c-black;
+				@include placeholder {
+					font-size: 12px;
+				}
 			}
 
 			&:focus {

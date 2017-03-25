@@ -38,6 +38,7 @@ h3 {
     position: relative;
     font-weight: 500;
     margin: 0 0 25px;
+    color: $c-black;
     font-family: "Sarine", sans-serif;
 
     @media (min-width: $screen-md-min) {
@@ -89,7 +90,7 @@ p {
         }
 
         &:hover {
-            
+
         }
     }
 }
