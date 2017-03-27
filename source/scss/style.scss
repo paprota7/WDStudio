@@ -2,10 +2,7 @@
 // Vendor files
 // =========================
 @import "vendor/_bootstrap";
-@import "vendor/_pagepiling";
-@import "vendor/_menu";
 @import "vendor/_socials";
-@import "vendor/_gallery";
 
 // Sprites
 // =========================
@@ -15,12 +12,11 @@
 // =========================
 @import "elements/_vars";
 @import "elements/_mixins";
-@import "elements/_buttons";
+@import "elements/_keyframes";
 @import "elements/_base";
-@import "elements/_navbar";
-@import "elements/_page";
-@import "elements/_tabs";
-@import "elements/_technologies";
+@import "elements/_buttons";
+@import "elements/_header";
+@import "elements/_navigation";
+@import "elements/_section";
 @import "elements/_preloader";
 @import "elements/_form";
-@import "elements/_popup";

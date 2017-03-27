@@ -1,0 +1,42 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: transparent;
+
+    &--fixed {
+        height: 80px;
+        max-height: 80px;
+        background-color: rgba($c-dark-gray, 0.8);
+
+        .header__logo {
+            width: auto;
+            height: 60px;
+            margin: 10px 0;
+
+            @media (max-width: $screen-md-max) {
+                position: static;
+                float: right;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__logo {
+        left: 50%;
+        display: block;
+        max-width: 100%;
+        position: absolute;
+        transform: translateX(-50%);
+        @include clearfix;
+
+        @media (min-width: $screen-md-min) {
+            width: 500px;
+        }
+        @media (max-width: $screen-sm-max) {
+            width: 280px;
+        }
+    }
+}

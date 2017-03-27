@@ -5,30 +5,85 @@ jQuery.noConflict();
 
     window.wdstudio = {
         init: function() {
-            this.pagePilling();
-            this.clicks();
+            this.preloader();
             this.socials();
-            this.tabs();
-            $('.preloader').hide('fade', 1000);
-            $('#dg-container').gallery();
-            $('.popup').popup();
+            this.parallax();
+            this.hero();
+            this.navigation();
+            this.fixHeader();
         },
 
-        pagePilling: function() {
-            $('#page').pagepiling({
-                anchors: ['home', 'ability', 'about', 'portfolio', 'contact'],
-                navigation: {
-                    'textColor': '#000',
-                    'bulletsColor': '#000',
-                    'position': 'right',
-                    'tooltips': ['Strona Główna', 'Co robimy', 'O nas', 'Portfolio', 'Kontakt']
-                },
-                menu: '#menu',
-                afterLoad: function(anchorLink, index) {
-                    if ($('#st-container').hasClass('st-menu-open')) {
-                        $('#st-container').removeClass('st-menu-open');
+        navigation: function() {
+            var toggle = $('.navigation__toggle'),
+                menu = $('.navigation__menu')
+                status = true;
+
+            toggle.on('click', function() {
+                if (status) {
+                    status = false;
+                    menu.toggle('slide', {
+                        direction: 'left'
+                    }, 500, function () {
+                        status = true;
+                    });
+                    toggle.toggleClass('navigation__toggle--active')
+                }
+            });
+        },
+
+        hero: function() {
+            var hero = $('.section__hero');
+
+            var setHeight = function(init) {
+                if (init) {
+                    hero.css('height', $(window).outerHeight());
+                } else {
+                    hero.animate({
+                        height : $(window).outerHeight()
+                    }, 500)
+                }
+            };
+
+            setHeight(true);
+
+            $(window).resize(function() {
+                setHeight();
+            });
+        },
+
+        fixHeader: function() {
+            var logo = $('.header__logo'),
+                header = $('.header');
+
+            var setHeader = function() {
+                if ($(window).scrollTop() <= 100) {
+                    if (header.hasClass('header--fixed')) {
+                        header.removeClass('header--fixed')
+                    }
+                    logo.css('top', (100 - $(window).scrollTop()));
+                } else {
+                    if (!header.hasClass('header--fixed')) {
+                        logo.removeAttr('style');
+                        header.addClass('header--fixed')
                     }
                 }
+            };
+
+            setHeader();
+
+            $(window).scroll(function() {
+                setHeader();
+            });
+        },
+
+        preloader: function() {
+            $('.preloader').hide('fade', 1000);
+        },
+
+        parallax: function() {
+            $('.section__hero').parallax({
+                speed: 0.1,
+                imageSrc: '../images/background/background-header.jpg'
             });
         },
 
@@ -37,88 +92,8 @@ jQuery.noConflict();
                 url: 'http://wdstudio.eu/',
                 text: 'Web Development, tylko z WDStudio!'
             });
-        },
-
-        clicks: function() {
-            $('.go-to-section').on('click', function() {
-                $('#page').pagepiling.moveTo($(this).attr('href').replace('#', ''));
-            });
-
-            if ($('#st-container').hasClass('st-menu-open')) {
-                $('#st-container').removeClass('st-menu-open');
-            }
-        },
-
-        tabs: function() {
-            var tabs = $('.tabs'),
-                nav = tabs.find('.tabs__nav'),
-                content = tabs.find('.tabs__content'),
-                navMode = '',
-                status = true;
-
-            content.find('.tabs__content__item:first-child').addClass('active');
-            nav.append('<span class="dot"></span>').find('.dot').css('top', nav.find('li:first-child a').position().top + (nav.find('li:first-child a').outerHeight() / 2));
-
-            var navResize = function() {
-                if ($(window).outerWidth(true) <= (nav.outerWidth() + 30)) {
-                    if (navMode === 'desktop' || navMode === '') {
-                        var items = nav.find('> ul > li'),
-                            width = (100 / items.length) + '%';
-
-                        navMode = 'mobile';
-
-                        items.css('width', width);
-                    }
-                } else {
-                    if (navMode === 'mobile' || navMode === '') {
-                        var items = nav.find('> ul > li');
-
-                        navMode = 'desktop';
-
-                        items.removeAttr('style');
-                    }
-                }
-            }
-
-            nav.find('a').on('click', function(e) {
-                e.preventDefault();
-                var clicked = $(this),
-                    dot = nav.find('.dot'),
-                    next = content.find($(this).attr('href')),
-                    previous = content.find('.tabs__content__item.active');
-
-                if (!next.hasClass('active') && next.length > 0 && status) {
-                    status = false;
-                    dot.animate({
-                        top: clicked.position().top + (clicked.outerHeight() / 2)
-                    }, 1000);
-                    previous.hide('slide', {
-                        direction: 'right'
-                    }, 500, function() {
-                        previous.removeClass('active');
-                        next.show('slide', {
-                            direction: 'right'
-                        }, 500, function() {
-                            next.addClass('active');
-                            status = true;
-                        });
-                    });
-                }
-            });
-
-            navResize();
-
-            $(window).on('resize', function() {
-                navResize();
-            });
         }
 
-        // scrollEvent: function() {
-        // }
-        //
-        // resizeEvent: function() {
-        // }
-        //
         // clicks: function () {
         // $('body').on('click', function () {
         //
