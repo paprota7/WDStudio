@@ -64,12 +64,12 @@
 		float: left;
 		background-color: transparent;
 		@media (min-width: $screen-md-min) {
-			padding: 10px;
+			padding: 7px;
 			transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
 			transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
 		}
 		@media (max-width: $screen-sm-max) {
-			padding: 15px;
+			padding: 10px;
 		}
 
 		.bar {
@@ -89,7 +89,7 @@
 
 			+ .bar {
 				@media (min-width: $screen-md-min) {
-					margin-top: 10px;
+					margin-top: 11px;
 				}
 				@media (max-width: $screen-sm-max) {
 					margin-top: 7px;

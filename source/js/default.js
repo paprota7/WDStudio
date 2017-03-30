@@ -15,7 +15,7 @@ jQuery.noConflict();
 
         navigation: function() {
             var toggle = $('.navigation__toggle'),
-                menu = $('.navigation__menu')
+                menu = $('.navigation__menu'),
                 status = true;
 
             toggle.on('click', function() {
@@ -28,26 +28,6 @@ jQuery.noConflict();
                     });
                     toggle.toggleClass('navigation__toggle--active')
                 }
-            });
-        },
-
-        hero: function() {
-            var hero = $('.section__hero');
-
-            var setHeight = function(init) {
-                if (init) {
-                    hero.css('height', $(window).outerHeight());
-                } else {
-                    hero.animate({
-                        height : $(window).outerHeight()
-                    }, 500)
-                }
-            };
-
-            setHeight(true);
-
-            $(window).resize(function() {
-                setHeight();
             });
         },
 

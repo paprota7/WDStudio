@@ -90,4 +90,11 @@
             font-size: 18px;
         }
     }
+
+    &__wrapper {
+        &--hero {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

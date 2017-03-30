@@ -1,26 +1,16 @@
 .section {
     &__hero {
-
-        h2 {
-            margin: 40px 0 80px;
-            font-size: 28px;
-            text-align: center;
-            font-weight: 500;
-            text-align: center;
-            color: $c-white;
+        @media (min-width: $screen-xs-min) {
+            padding: 600px 0 300px;
         }
-
-        &__buttons {
-            bottom: 20vw;
-            position: absolute;
-            @media (min-width: $screen-sm-min) {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            @media (max-width: $screen-xs-max) {
-                width: 100%;
-            }
+        @media (min-width: $screen-sm-min) {
+            padding: 600px 0 0;
+        }
+        @media (min-width: $screen-md-min) {
+            padding: 600px 0 0;
+        }
+        @media (min-width: $screen-lg-min) {
+            padding: 600px 0 0;
         }
     }
 
