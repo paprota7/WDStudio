@@ -41,42 +41,92 @@ jQuery.noConflict();
             this.preloader();
             this.socials();
             this.parallax();
-            this.hero();
             this.navigation();
             this.fixHeader();
+            this.screenModeEvent()
         },
 
-        navigation: function() {
-            var toggle = $('.navigation__toggle'),
-                menu = $('.navigation__menu'),
-                status = true;
+        getScreenMode: function () {
+            return window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace('"', '').replace('"', '');
+        },
 
-            toggle.on('click', function() {
-                if (status) {
-                    status = false;
-                    menu.toggle('slide', {
-                        direction: 'left'
-                    }, 500, function () {
-                        status = true;
-                    });
-                    toggle.toggleClass('navigation__toggle--active')
+        screenModeEvent: function() {
+            var mode = wdstudio.getScreenMode();
+
+            $(window).resize(function() {
+                if (mode !== wdstudio.getScreenMode()) {
+                    mode = wdstudio.getScreenMode();
+                    $(document).trigger('changeScreenMode', String(mode));
                 }
             });
         },
 
+        navigation: function() {
+            var toggle = $('.navigation__toggle'),
+                navigation = $('.navigation'),
+                menu = $('.navigation__menu'),
+                body  = $('body'),
+                status = true;
+
+            var changePosition = function (mode, init) {
+                if (init) {
+                    if (mode === 'mobile') {
+                        $('body').prepend(navigation);
+                    }
+                } else {
+                    if (mode === 'mobile') {
+                        $('body').prepend(navigation);
+                        menu.removeAttr('style');
+                    } else {
+                        navigation.insertAfter(toggle).removeClass('show');
+                    }
+                    toggle.removeClass('navigation__toggle--active');
+                }
+            };
+
+            var toggleNavigation = function () {
+                if (status) {
+                    status = false;
+                    if (wdstudio.getScreenMode() == 'mobile') {
+                        navigation.toggleClass('navigation--mobile-show');
+                        toggle.toggleClass('navigation__toggle--right');
+                        $('.header__logo').toggleClass('header__logo--hide');
+                        setTimeout(function () {
+                            status = true;
+                        }, 500);
+                    } else {
+                        menu.toggle('slide', {
+                            direction: 'left'
+                        }, 500, function() {
+                            status = true;
+                        });
+                    }
+                    toggle.toggleClass('navigation__toggle--active');
+                }
+            };
+
+            changePosition(wdstudio.getScreenMode(), true);
+
+            $(document).on('changeScreenMode', function(e, mode) {
+                changePosition(mode, false);
+            });
+
+            toggle.on('click', function() {
+                toggleNavigation();
+            });
+        },
+
         fixHeader: function() {
-            var logo = $('.header__logo'),
-                header = $('.header');
+            var header = $('.header'),
+                logo = $('.hero__logo');
 
             var setHeader = function() {
-                if ($(window).scrollTop() <= 100) {
+                if ($(window).scrollTop() <= (logo.offset().top - header.outerHeight())) {
                     if (header.hasClass('header--fixed')) {
                         header.removeClass('header--fixed')
                     }
-                    logo.css('top', (100 - $(window).scrollTop()));
                 } else {
                     if (!header.hasClass('header--fixed')) {
-                        logo.removeAttr('style');
                         header.addClass('header--fixed')
                     }
                 }
@@ -94,7 +144,7 @@ jQuery.noConflict();
         },
 
         parallax: function() {
-            $('.section__hero').parallax({
+            $('.hero').parallax({
                 speed: 0.1,
                 imageSrc: '../images/background/background-header.jpg'
             });

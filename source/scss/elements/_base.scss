@@ -17,6 +17,21 @@
 
 body {
     font-family: 'Sarine', sans-serif;
+    &:before {
+        display: none;
+        @media (max-width: $screen-xs-max) {
+            content: 'mobile';
+        }
+        @media (min-width: $screen-sm-min) {
+            content: 'tablet';
+        }
+        @media (min-width: $screen-md-min) {
+            content: 'desktop';
+        }
+        @media (min-width: $screen-lg-min) {
+            content: 'large-desktop';
+        }
+    }
 }
 
 h1 {
@@ -101,4 +116,9 @@ a:focus,
 button:focus,
 select:focus {
     outline: none;
+}
+
+a, button, select {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
 }

@@ -1,0 +1,33 @@
+.hero {
+    background-size: cover;
+    height: 100vh;
+
+    &__logo {
+        width: 500px;
+        display: block;
+        max-width: 80%;
+        margin: 15vh auto 0;
+        @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+            max-width: 300px;
+        }
+    }
+
+    &__buttons {
+        margin-top: 20vh;
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+            margin-top: 0;
+        }
+        @media (max-width: $screen-xs-min) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}

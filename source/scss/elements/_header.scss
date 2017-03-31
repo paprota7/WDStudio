@@ -4,17 +4,20 @@
     left: 0;
     right: 0;
     z-index: 10;
+    height: 80px;
+    max-height: 80px;
+    padding: 20px 0;
+    transition: all 0.2s linear;
     background: transparent;
 
     &--fixed {
-        height: 80px;
-        max-height: 80px;
-        background-color: rgba($c-dark-gray, 0.8);
+        background-color: rgba($c-dark-gray, 0.9);
 
         .header__logo {
+            display: block;
             width: auto;
             height: 60px;
-            margin: 10px 0;
+            margin: -10px 0;
 
             @media (max-width: $screen-md-max) {
                 position: static;
@@ -26,17 +29,13 @@
 
     &__logo {
         left: 50%;
-        display: block;
+        display: none;
         max-width: 100%;
         position: absolute;
         transform: translateX(-50%);
-        @include clearfix;
 
-        @media (min-width: $screen-md-min) {
-            width: 500px;
-        }
-        @media (max-width: $screen-sm-max) {
-            width: 280px;
-        }
+        &--hide {
+			display: none !important;
+		}
     }
 }
